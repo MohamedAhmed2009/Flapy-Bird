@@ -1,0 +1,53 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#game{
+  background-color: #171427;
+  width: 400px;
+  height: 500px;
+  border: 1px solid black;
+  margin: auto;
+  margin-top: 25px;
+  position: relative;
+  overflow: hidden;
+}
+#obstacle{
+  width: 50px;
+  height: 500px;
+  background-color: #f8f8f8;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 1;
+  animation: move 2s infinite linear;
+}
+#hole{
+  width: 50px;
+  height: 150px;
+  background-color: #171427;
+  position: absolute;
+  top: 150px;
+  animation: move 2s infinite linear;
+  left: 100%;
+  z-index: 2;
+}
+
+@keyframes move {
+  0%{
+    left: 100%;
+  }
+  100%{
+    left: -60px;
+  }
+}
+#bird{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: yellow;
+  position: absolute;
+  top: 100px;
+  z-index: 3;
+}
